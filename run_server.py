@@ -9,7 +9,7 @@ if __name__ == '__main__':
     import subprocess
     import os
     import wsgiref.handlers
-    sys.path.insert(0, 'libs.zip')
+    sys.path.insert(0, 'lib.zip')
     import cherrypy
     import website
     current_dir = os.path.dirname(os.path.abspath(__file__))
