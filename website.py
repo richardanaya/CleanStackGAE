@@ -1,6 +1,6 @@
 import cherrypy
 from models import *
-from util import *
+from lib.util import *
 
 class Root(object):
     @cherrypy.expose
