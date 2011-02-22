@@ -7,9 +7,9 @@
 if __name__ == '__main__':
     import sys
     import subprocess
-    sys.path.append("lib")
-    import server
     import os
+    import wsgiref.handlers
+    sys.path.insert(0, 'libs.zip')
     import cherrypy
     import website
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -26,4 +26,5 @@ if __name__ == '__main__':
                 'tools.staticdir.on': True,
                 'tools.staticdir.dir': os.path.join(current_dir,"js") },
         }
-    cherrypy.quickstart(website.Root(),"/",config)
+    app = cherrypy.tree.mount(website.Root(), "/",config)
+    wsgiref.handlers.CGIHandler().run(app)
