@@ -13,7 +13,7 @@ def get_template(name):
     except TemplateNotFound:
         raise TemplateNotFound(name)
 
-def render(name,params):
+def render(name,params={}):
     return get_template(name).render(params)
 
 def redirect(url):
