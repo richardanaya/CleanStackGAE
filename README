@@ -1,0 +1,5 @@
+Welcome to CleanStackGAE, a stack of web technologies for building powrful concise web projects on Google AppEngine.  Important files:
+
+lib/run_server.py - This is the first file run, it shows how everything is setup.
+website.py - This is the file with web handlers using CherryPy.
+models.py - This is the file where data models for Google AppEngines database are stored
