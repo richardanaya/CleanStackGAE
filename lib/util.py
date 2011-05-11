@@ -4,7 +4,7 @@ import cherrypy
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 template_dirs = []
-template_dirs.append(os.path.join(current_dir, '../templates'))
+template_dirs.append(os.path.join(current_dir, '../pages'))
 
 def get_template(name):
     env = Environment(loader = FileSystemLoader(template_dirs))

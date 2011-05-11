@@ -11,8 +11,8 @@ if __name__ == '__main__':
     #import wsgiref.hddandlers
     from google.appengine.ext import webapp
     from google.appengine.ext.webapp.util import run_wsgi_app
-    import rest
     sys.path.insert(0, 'lib.zip')
+    import rest
     import cherrypy
     import website
     current_dir = os.path.dirname(os.path.abspath(__file__))
