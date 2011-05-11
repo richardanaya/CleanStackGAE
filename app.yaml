@@ -5,10 +5,10 @@ api_version: 1
 
 handlers:
 - url: /css
-  static_dir: css
+  static_dir: root/css
 - url: /js
-  static_dir: js
+  static_dir: root/js
 - url: /img
-  static_dir: img
+  static_dir: root/img
 - url: .*
   script: lib/run_server.py
