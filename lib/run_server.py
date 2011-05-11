@@ -12,7 +12,6 @@ if __name__ == '__main__':
     from google.appengine.ext import webapp
     from google.appengine.ext.webapp.util import run_wsgi_app
     sys.path.insert(0, 'lib.zip')
-    import rest
     import cherrypy
     import website
     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -30,6 +29,7 @@ if __name__ == '__main__':
                 'tools.staticdir.dir': os.path.join(current_dir,"js") },
         }
 
+    import rest
     rest_app = webapp.WSGIApplication([('/rest/.*', rest.Dispatcher)])
     rest.Dispatcher.base_url = "/rest"
     cherrypy.tree.graft(rest_app,'/rest')
