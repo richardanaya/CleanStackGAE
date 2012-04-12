@@ -9,4 +9,4 @@ class Root(object):
 
     @cherrypy.expose(alias="favicon.ico")
     def favicon(self):
-        redirect("images/favicon.ico")
+        redirect("img/favicon.ico")
